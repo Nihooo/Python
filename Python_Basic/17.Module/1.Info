@@ -9,3 +9,13 @@
 # __name__ 为被调用时是它的文件路径，调用时则是__main__
 
 # __file__  可以打印出文件名，在pycharm上会得到文件的绝对路径
+
+
+# import sys
+# sys.path.append() # 临时修改环境变量，永久需在系统上修改
+
+# 要在bin.py中调用上上级目录下调用my_module包里的函数
+# import sys, os
+#
+# BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__))) # os.path.abspath()会得到绝对路径 os.path.dirname()会得到上一层路径的文件名
+# sys.path.append(BASE_DIR) # 加入环境变量中，就能在day21_lesson下找到my_module
